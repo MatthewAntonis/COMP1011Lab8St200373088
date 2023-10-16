@@ -86,7 +86,7 @@ public class EmployeeModel {
             }
         }
 
-        // Getters
+
         public int getId() {
             return id;
         }

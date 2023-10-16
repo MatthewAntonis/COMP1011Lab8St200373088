@@ -1,0 +1,24 @@
+.root {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+Pane, AnchorPane {
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("images/background.jpg");
+}
+
+
+#employeeCountLabel {
+    -fx-text-fill: white;
+}
+
+#avgSalaryLabel {
+    -fx-text-fill: white;
+}
+
+#title {
+    -fx-text-fill: white;
+}
