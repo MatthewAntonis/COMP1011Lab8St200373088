@@ -14,7 +14,7 @@ public class Main extends Application{
         primaryStage.setTitle("Code Crafters");
         root.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/images/CodeLogo.png")));
-        primaryStage.setScene(new Scene(root, 450, 400));
+        primaryStage.setScene(new Scene(root, 850, 700));
         primaryStage.show();
     }
 

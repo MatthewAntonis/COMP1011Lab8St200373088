@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private static final String HOST = "MySQL80";
+    private static final String HOST = "localhost";
 
     private static final String USER = "root";
 

@@ -7,13 +7,13 @@
 <AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advjavamidterm200373088.EmployeeController">
     <VBox prefWidth="500.0" spacing="10.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
         <children>
-            <Label prefHeight="35.0" prefWidth="189.0"  fx:id="title" text="List of Employees">
+            <Label fx:id="title" prefHeight="35.0" prefWidth="189.0" text="List of Employees">
                 <font>
                     <Font size="24.0" />
                 </font>
             </Label>
 
-            <TableView fx:id="employeeTable" prefHeight="200.0" prefWidth="500.0">
+            <TableView fx:id="employeeTable" prefHeight="527.0" prefWidth="500.0">
                 <columns>
                     <TableColumn fx:id="idColumn" text="ID" />
                     <TableColumn fx:id="nameColumn" text="Name" />
