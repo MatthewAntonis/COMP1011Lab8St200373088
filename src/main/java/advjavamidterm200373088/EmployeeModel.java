@@ -7,10 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.sql.PreparedStatement;
 
 public class EmployeeModel {
     public static class Employee {
@@ -136,5 +138,51 @@ public class EmployeeModel {
         }
 
         return employees;
+    }
+
+    public List<Employee> getAllEmployees() {
+        List<Employee> employees = new ArrayList<>();
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             Statement stmt = conn.createStatement()) {
+
+            String query = "SELECT id, name, birthday, department, email, salary FROM employees WHERE id > 0";
+            ResultSet rs = stmt.executeQuery(query);
+
+            while (rs.next()) {
+                Employee employee = new Employee(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getDate("birthday"),
+                        rs.getString("department"),
+                        rs.getString("email"),
+                        rs.getDouble("salary")
+                );
+                employees.add(employee);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return employees;
+    }
+
+    public boolean deleteEmployeeById(int id) {
+        String deleteQuery = "DELETE FROM employees WHERE id = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(deleteQuery)) {
+
+            pstmt.setInt(1, id);
+
+            int rowsAffected = pstmt.executeUpdate();
+
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
