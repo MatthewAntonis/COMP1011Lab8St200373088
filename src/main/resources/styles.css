@@ -4,12 +4,11 @@
     -fx-text-fill: black;
 }
 
-Pane, AnchorPane {
+.main-anchor-pane {
+    -fx-background-image: url("images/background.jpg");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
-    -fx-background-image: url("images/background.jpg");
 }
-
 
 #employeeCountLabel {
     -fx-text-fill: white;
@@ -22,3 +21,8 @@ Pane, AnchorPane {
 #title {
     -fx-text-fill: white;
 }
+
+hbox {
+    -fx-background-image: none;
+}
+

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advjavamidterm200373088.EmployeeController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advjavamidterm200373088.EmployeeController" fx:id="mainAnchorPane" styleClass="main-anchor-pane" >
     <VBox prefWidth="500.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <children>
             <Label fx:id="title" prefHeight="35.0" prefWidth="189.0" text="List of Employees">
@@ -23,7 +23,7 @@
             <Label fx:id="avgSalaryLabel" text="Avg Salary: " />
 
             <HBox spacing="20.0">
-                <TextField fx:id="selectedIdField" prefWidth="250.0" promptText="Enter Employee ID" />
+                <TextField fx:id="selectedIdField" prefWidth="250.0" promptText="Enter Employee ID" style="-fx-background-color: white; -fx-text-fill: black; -fx-prompt-text-fill: #757575; -fx-border-color: black; -fx-border-width: 1;" />
                 <Button fx:id="deleteButton" onAction="#handleDeleteEmployee" text="Delete Employee" />
             </HBox>
         </children>
