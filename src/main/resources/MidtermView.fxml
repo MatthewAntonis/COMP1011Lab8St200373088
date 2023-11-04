@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.geometry.*?>
 
 <AnchorPane fx:id="mainAnchorPane" styleClass="main-anchor-pane" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advjavamidterm200373088.EmployeeController">
-<VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+<VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <padding>
-            <Insets top="20" right="20" bottom="20" left="20"/>
+            <Insets bottom="20" left="20" right="20" top="20" />
         </padding>
 
-        <VBox prefWidth="500.0" spacing="10.0">
+        <VBox prefWidth="500.0" spacing="10.0" alignment="CENTER">
             <children>
-                <Label fx:id="title" prefHeight="35.0" prefWidth="504.0" style="-fx-alignment: center;" text="List of Employees" textAlignment="CENTER">
+                <Label fx:id="title" alignment="CENTER" prefHeight="35.0" prefWidth="526.0" style="-fx-text-alignment: center;" text="List of Employees">
                     <font>
                         <Font name="System Bold" size="24.0" />
-                    </font></Label>
+                    </font>
+                </Label>
 
                 <TableView fx:id="employeeTable" prefHeight="527.0" prefWidth="500.0">
                     <columns>
