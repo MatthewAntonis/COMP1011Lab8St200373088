@@ -185,4 +185,8 @@ public class EmployeeModel {
             return false;
         }
     }
+
+    public boolean deleteEmployee(Employee employee) {
+        return deleteEmployeeById(employee.getId());
+    }
 }

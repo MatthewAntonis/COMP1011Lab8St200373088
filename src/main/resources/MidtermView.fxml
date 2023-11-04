@@ -2,15 +2,11 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="advjavamidterm200373088.EmployeeController">
-    <VBox prefWidth="500.0" spacing="10.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+    <VBox prefWidth="500.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <children>
             <Label fx:id="title" prefHeight="35.0" prefWidth="189.0" text="List of Employees">
-                <font>
-                    <Font size="24.0" />
-                </font>
             </Label>
 
             <TableView fx:id="employeeTable" prefHeight="527.0" prefWidth="500.0">
@@ -27,8 +23,8 @@
             <Label fx:id="avgSalaryLabel" text="Avg Salary: " />
 
             <HBox spacing="20.0">
-                <TextField fx:id="employeeIdField" prefWidth="250.0" promptText="Enter Employee ID" />
-                <Button fx:id="removeButton" text="Remove Employee" />
+                <TextField fx:id="selectedIdField" prefWidth="250.0" promptText="Enter Employee ID" />
+                <Button fx:id="deleteButton" onAction="#handleDeleteEmployee" text="Delete Employee" />
             </HBox>
         </children>
     </VBox>

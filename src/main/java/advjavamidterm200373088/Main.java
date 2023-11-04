@@ -7,7 +7,30 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Main extends Application{
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Main extends Application {
+
+    static {
+        testDatabaseConnection();
+    }
+
+    private static void testDatabaseConnection() {
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            if (conn != null) {
+                System.out.println("Database connected!");
+                conn.close(); // Close the connection once done
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("SQLException: " + e.getMessage());
+            System.out.println("SQLState: " + e.getSQLState());
+            System.out.println("VendorError: " + e.getErrorCode());
+        }
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/MidtermView.fxml"));
