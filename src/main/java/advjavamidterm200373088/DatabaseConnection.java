@@ -8,9 +8,9 @@ public class DatabaseConnection {
 
     private static final String HOST = "localhost";
 
-    private static final String USER = "root";
+    private static final String USER = "student";
 
-    private static final String PASSWORD = "Matthew99";
+    private static final String PASSWORD = "student";
 
     private static final String DB_NAME = "f23test1";
 
